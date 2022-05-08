@@ -1,0 +1,110 @@
+function performValidation(this){
+	
+	type = (this).data('validation-type');
+
+	switch(type){
+
+	case 'number':
+	
+		if(!validate_number(this));
+			addError(this);
+		else
+			addSuccess(this);
+
+	}
+	case 'number':
+	
+		if(!validate_number(this));
+			addError(this);
+		else
+			addSuccess(this);
+
+	}
+	case 'number':
+	
+		if(!validate_number(this));
+			addError(this);
+		else
+			addSuccess(this);
+
+	}
+	case 'number':
+	
+		if(!validate_number(this));
+			addError(this);
+		else
+			addSuccess(this);
+
+	}
+	case 'number':
+	
+		if(!validate_number(this));
+			addError(this);
+		else
+			addSuccess(this);
+
+	}
+}
+
+
+function validate_number(this){
+	
+	id
+
+}
+
+fuction addError(this,error){
+	
+	$(this).addClass('error');
+
+	$(this).after('<span class='span-error'>'+error+'</span>');
+
+
+}
+
+
+fuction addsuccess(this){
+	
+	$(this).removeClass('error');
+	$(this).addClass('success');
+
+	$(this).closest('.span-error').remove();
+
+
+	enableSubmitButton(this);
+
+}
+
+function getParentForm(this){
+	
+	return $(this).parents('form').first();
+}
+
+function enableSubmitButton(this){
+	
+	var form = getParentForm(this);
+
+	var totalrequired = 0;
+	var totalSuccess = 0;
+
+	$(form).find('input[required]').each(function(){
+		totalrequired++;
+	}
+
+	$(form).find('input.success').each(function(){
+		totalSuccess++;
+	}
+
+	if(totalrequired === totalSuccess)
+	{
+		$(form).find('submit').removeAttr('disabled')
+	}
+	else
+	{
+
+		$(form).attr('disabled', 'disabled' );
+
+	}
+
+
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JForm</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .error {
+            color: rgb(253, 11, 11);
+            border-color: rgb(253, 11, 11);
+            border-width: 2px;
+
+        }
+        .success{
+            color: rgba(6, 122, 41, 0.911);
+            border-color: rgba(6, 122, 41, 0.911);
+            border-width: 2px;
+
+
+        }
+    </style>
+</head>
+
+<body class="bg-info">
+    <div class="container"> <br><br>
+        <h1 class="text-center text-warning">JQUERY FORM VALIDATION</h1>
+        <div class="col-lg-8 m-auto d-block">
+            <form id="farm" action="" method="post">
+                <div class="form-group">
+                    <label for="username"> <b>User Name</b></label>
+                    <input required="required" type="text" placeholder="Please Enter your name.." data-validation-type="username" name="username" id="username"
+                        class="form-control" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="phone"> <b>Phone Number</b></label>
+                    <input type="number" name="phone" placeholder="Please Ente your phone number" data-validation-type="phone" id="phone" class="form-control"
+                        autocomplete="off">
+                    <h5 id="emailcheck"> </h5>
+                </div>
+                <div class="form-group">
+                    <label for="email"> <b>User Email</b></label>
+                    <input required="required" type="email" name="email" placeholder="Please Enter your email" data-validation-type="email" id="email" class="form-control"
+                        autocomplete="off">
+
+                </div>
+                <div class="form-group">
+                    <label for="password"> <b>User Password</b></label>
+                    <input required="required" type="text" name="password" placeholder="Please Enter your  password" data-validation-type="password" id="password"
+                        class="form-control" autocomplete="off">
+
+                </div>
+                <div class="form-group">
+                    <label for="cpassword"> <b>Confirm Password</b></label>
+                    <input required="required" type="text" name="cpassword" id="cpassword" placeholder="Please Confirm your password" data-validation-type="cpassword"
+                        class="form-control" autocomplete="off">
+
+                </div>
+
+                <input type="submit" name="" id="" value="Submit" class="btn btn-danger">
+            </form>
+
+        </div>
+
+    </div>
+    <script src="jq.js"></script>
+
+
+
+
+</body>
+
+</html>
