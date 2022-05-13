@@ -65,13 +65,13 @@ function performValidation(_this) {
 
     enableSubmitButton(_this);
 }
-
+// check empty for reqier field
 function checkEmpty(_this) {
 
     const userVal = $.trim($(_this).val());
     if ($(_this).prop('required') && userVal === "") {
         setErrorMsg(_this, $(_this).prop('name') + ' cannot be blank!');
-        console.log("userVal", $(_this).prop('name') + ' cannot be blank!');
+        // console.log("userVal", $(_this).prop('name') + ' cannot be blank!');
         return false;
     } else {
         return userVal;
@@ -133,7 +133,7 @@ function validate_email(_this) {
 }
 validate_Password
 function validate_Password(_this) {
-    var passwordVal = checkEmpty(_this);
+   passwordVal = checkEmpty(_this);
     // passwordVal = $(_this).val();
     if (passwordVal) {
 
@@ -146,18 +146,19 @@ function validate_Password(_this) {
             setSuccessMsg(_this);
         }
     }
+    
 }
 // >> validate_ConPassword<<
 function validate_ConPassword(_this) {
     var ConpasswordVal = checkEmpty(_this);
     // const ConpasswordVal = $(_this).val();
-        if (ConpasswordVal === "") {
-            setErrorMsg(_this, 'Confirm Password cannot be Null!');
-        } else if (passwordVal != ConpasswordVal) {
+        if (ConpasswordVal) {
+           if (passwordVal != ConpasswordVal) {
             setErrorMsg(_this, 'Confirm password should be Matced!');
         } else {
             setSuccessMsg(_this);
         }
+    }
     
 }
 
